@@ -115,7 +115,6 @@ def run_stream(model, source, conf: float):
         print(f"Error: cannot open source -> {source}")
         return
 
-    print("Press 'q' to quit.")
     total_inference_time = 0.0  # total inference time across frames
     frames = 0        # number of processed frames
 
@@ -165,10 +164,7 @@ def run_stream(model, source, conf: float):
     cap.release()
     cv2.destroyAllWindows()
 
-    # Final summary after stream ends
-    print(f"Frames processed: {frames}")
-    if total_inference_time > 0:
-        print(f"Average FPS: {frames / total_inference_time:.2f}")
+    # No terminal summary: metrics are shown directly on frames.
 
 
 def main():

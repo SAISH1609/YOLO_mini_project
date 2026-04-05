@@ -49,13 +49,13 @@ python .\main.py --source 1
 ### D) Video file
 
 ```powershell
-python .\main.py --source ".\inputs\traffic.mp4"
+python .\main.py --source ".\inputs\traffic_day.mp4"
 ```
 
 ### E) Image file
 
 ```powershell
-python .\main.py --source ".\inputs\traffic.png"
+python .\main.py --source ".\inputs\crowd.jpg"
 ```
 
 ### F) Use another pretrained model
