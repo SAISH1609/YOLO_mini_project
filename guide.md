@@ -17,7 +17,7 @@ python -m venv .venv
 
 ```powershell
 python -m pip install --upgrade pip
-pip install ultralytics opencv-python
+pip install ultralytics opencv-python streamlit numpy pillow
 ```
 
 ## 4. Run the script
@@ -88,6 +88,20 @@ python .\main.py --source ".\inputs\lowlight_motion.mp4"
 python .\main.py --source ".\inputs\traffic_day.mp4"
 ```
 
+### J) Run the frontend (Streamlit app)
+
+```powershell
+streamlit run .\app.py
+```
+
+After running this command, open the local URL shown in the terminal (usually `http://localhost:8501`).
+
+In the frontend:
+
+- Choose model (`yolov8n.pt`, `yolov8s.pt`, or `yolov8m.pt`) from the sidebar.
+- Select input source: Image, Video, or Webcam.
+- Upload media for Image/Video mode, or start webcam mode.
+
 ## 5. Stop detection
 
 - In webcam/video mode, press **q** in the output window.
@@ -98,3 +112,4 @@ python .\main.py --source ".\inputs\traffic_day.mp4"
 - Object count per frame.
 - Instant FPS and average FPS on video/webcam.
 - In image mode, inference time is shown on the image.
+- In frontend mode, live metrics and class breakdown are shown in the dashboard.
